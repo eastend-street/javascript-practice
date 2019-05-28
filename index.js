@@ -11,15 +11,15 @@ document.write(
   "<h1>The name of the person who created Apple is " + person + "</h1>"
 );
 
-total = 0;
-even_total = 0;
-odd_total = 0;
-for (number = 1; number < 101; number++) {
-  total = total + number;
-  if (number % 2 === 0) {
-    even_total = even_total + number;
-  } else if (number % 2 === 1) {
-    odd_total = odd_total + number;
+let total = 0;
+let even_total = 0;
+let odd_total = 0;
+for (let i = 1; i <= 100; i++) {
+  total += i;
+  if (i % 2 === 0) {
+    even_total += i;
+  } else if (i % 2 === 1) {
+    odd_total += i;
   }
 }
 
@@ -32,3 +32,10 @@ document.write(
     odd_total +
     ". </p>"
 );
+
+
+if (2 % 2 === 0) {
+  even_total += 2;
+} else if (3 % 2 === 1) {
+  odd_total += i;
+}
