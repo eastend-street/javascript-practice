@@ -5,4 +5,4 @@ function factorial(n) {
   else return (total = factorial(n - 1) * n);
 }
 
-console.log(factorial(4));
+console.log(factorial(10));
