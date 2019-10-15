@@ -15,5 +15,9 @@ console.log({ animal });
 const animalConst = "dog-const";
 console.log({ animalConst });
 
-animalConst = "cat";
-console.log({ animalConst }); // error
+// animalConst = "cat";
+// console.log({ animalConst }); // error
+
+// template literals
+const age = 26;
+console.log(`My age is ${age}.`);
