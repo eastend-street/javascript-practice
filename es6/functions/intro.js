@@ -51,3 +51,11 @@ console.log(classes.webDev);
 
 const { pets, nameSample, age } = sampleObj;
 console.log({ nameSample, pets, age });
+
+// equivalent if statement
+const num1 = 3;
+const num2 = 6;
+
+console.log(
+  num1 === num2 ? "num1 is same as num2" : "num1 is not equal to num2"
+);
