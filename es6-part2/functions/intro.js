@@ -47,3 +47,45 @@ console.table(classObj);
 console.log(classObj[3] ? "true" : "false");
 
 console.log(whichIsYoung(classObj[1], classObj[2]));
+
+let devicesArr = ["iPhone", "Android", "Kindle", "Pixel"];
+console.log(devicesArr.length);
+devicesArr.length = 3;
+console.log(devicesArr);
+
+const houseType = [
+  "bachelor",
+  "studio",
+  "condo",
+  "apartment",
+  "basement",
+  "house"
+];
+
+for (let i = 0; i < houseType.length; i++) {
+  console.log(`House type No.${i + 1}  ${houseType[i]}`);
+}
+
+// Extract property name
+for (let type of houseType) {
+  console.log(`${type}`);
+}
+
+// Extract index number
+for (let typeIndex in houseType) {
+  console.log(`${typeIndex}`);
+}
+
+const weather = {
+  temperature: "30c",
+  city: "vancouver",
+  date: "Nov 16"
+};
+
+for (let key in weather) {
+  console.log(`${key} ${weather[key]}`);
+}
+
+for (let [key, value] of Object.entries(weather)) {
+  console.log(`${key} ${value}`);
+}
