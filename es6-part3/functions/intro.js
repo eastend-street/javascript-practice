@@ -18,13 +18,22 @@ const filteredResult = students.filter(student => student.length < 4);
 console.log(filteredResult);
 
 // splice ---------------------------------
-let sweets = ["chocolate", "cake", "bubble tea", "cheese cake", "potato chips"];
+const sweets = [
+  "chocolate",
+  "cake",
+  "bubble tea",
+  "cheese cake",
+  "potato chips"
+];
 
 sweets.splice(0, 2, "Hot chocolate");
 console.log(sweets);
 
 // slice ---------------------------------
-let animals = ["lion", "mink", "parrots", "cats", "snake", "rabbit"];
+const animals = ["lion", "mink", "parrots", "cats", "snake", "rabbit"];
 
 const slicedAnimals = animals.slice(2, 4);
 console.log(animals, slicedAnimals);
+
+// for each ---------------------------------
+animals.forEach(animal => console.log(`I love ${animal}`));
