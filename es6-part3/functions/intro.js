@@ -49,3 +49,8 @@ numbers.sort(function(number1, number2) {
 });
 
 console.log(numbers);
+
+// find ---------------------------------
+const cars = ["Mitsubishi", "Toyota", "Ford", "Benz", "Ferrari"];
+const found = cars.find(car => car === "Ford");
+console.log(found);
