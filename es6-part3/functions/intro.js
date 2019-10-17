@@ -42,3 +42,10 @@ animals.forEach(animal => console.log(`I love ${animal}`));
 const numbers = [2, 5, 7, 7, 9, 10];
 const totalNum = numbers.reduce((total, currentNum) => total + currentNum);
 console.log(totalNum);
+
+// sort numbers ---------------------------------
+numbers.sort(function(number1, number2) {
+  return number2 - number1;
+});
+
+console.log(numbers);
