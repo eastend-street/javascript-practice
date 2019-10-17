@@ -37,3 +37,8 @@ console.log(animals, slicedAnimals);
 
 // for each ---------------------------------
 animals.forEach(animal => console.log(`I love ${animal}`));
+
+// reduce ---------------------------------
+const numbers = [2, 5, 7, 7, 9, 10];
+const totalNum = numbers.reduce((total, currentNum) => total + currentNum);
+console.log(totalNum);
