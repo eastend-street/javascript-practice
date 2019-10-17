@@ -58,3 +58,7 @@ console.log(found);
 // includes ---------------------------------
 console.log("Is there Toyota?", cars.includes("Toyota"));
 console.log("Is there Honda?", cars.includes("Honda"));
+
+// some ---------------------------------
+const isFound = cars.some(car => car === "Ford");
+console.log(isFound);
