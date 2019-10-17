@@ -62,3 +62,8 @@ console.log("Is there Honda?", cars.includes("Honda"));
 // some ---------------------------------
 const isFound = cars.some(car => car === "Ford");
 console.log(isFound);
+
+// indexOf ---------------------------------
+const indexOfBenz = cars.indexOf("Benz");
+const indexOfTesla = cars.indexOf("Tesla");
+console.log(indexOfBenz, indexOfTesla);
