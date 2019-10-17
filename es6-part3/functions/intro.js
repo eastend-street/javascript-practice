@@ -67,3 +67,30 @@ console.log(isFound);
 const indexOfBenz = cars.indexOf("Benz");
 const indexOfTesla = cars.indexOf("Tesla");
 console.log(indexOfBenz, indexOfTesla);
+
+// join ---------------------------------
+const joinText = cars.join("");
+console.log(joinText);
+
+// split ---------------------------------
+// const splitText = car.split(" , ");
+// console.log(splitText);
+
+// Class ---------------------------------
+class Student {
+  constructor(name, age) {
+    // global variable in your class
+    this.name = name;
+    this.age = age;
+
+    // cannot use it outside constructor
+    const studentName = name;
+  }
+
+  greetStudent() {
+    return `Hi, my name is ${this.name}.`;
+  }
+}
+
+const firstStudent = new Student("Jun", 31);
+console.log(firstStudent.greetStudent());
