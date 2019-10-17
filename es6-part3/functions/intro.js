@@ -1,3 +1,4 @@
+// map---------------------------------
 const students = ["Gustavo", "Ronan", "James", "Francois", "Jun"];
 
 students.map(student => console.log(`Hi, ${student}`));
@@ -11,3 +12,7 @@ const greetingsReturn = students.map(student => {
 });
 
 console.log(greetingsReturn);
+
+// filter ---------------------------------
+const filteredResult = students.filter(student => student.length < 4);
+console.log(filteredResult);
