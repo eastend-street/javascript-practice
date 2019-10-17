@@ -54,3 +54,7 @@ console.log(numbers);
 const cars = ["Mitsubishi", "Toyota", "Ford", "Benz", "Ferrari"];
 const found = cars.find(car => car === "Ford");
 console.log(found);
+
+// includes ---------------------------------
+console.log("Is there Toyota?", cars.includes("Toyota"));
+console.log("Is there Honda?", cars.includes("Honda"));
