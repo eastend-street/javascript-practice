@@ -31,3 +31,11 @@ const handleInputFocus = () => {
 const handleInputBlur = () => {
   console.log("Blurred");
 }
+
+const handleOnMouseOver= () => {
+  console.log("Mouse overed");
+}
+
+const handleOnMouseOut= () => {
+  console.log("Mouse out");
+}
