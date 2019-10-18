@@ -64,3 +64,9 @@ addition2(
   { name: "Ayako", gender: "female" },
   { name: "James", gender: "male" }
 );
+
+// Spread operator
+let numArr = [5, 7, 8, 9, 5, 3];
+console.log("spreadArr", ...numArr);
+
+console.log("add extra element with new array", [...numArr]);
