@@ -1,3 +1,4 @@
+// map
 const map = new Map();
 map
   .set("key1", "student1")
@@ -15,14 +16,30 @@ const map2 = new Map([
   ["England", "London"]
 ]);
 
-for(let country of map2.keys()){
+for (let country of map2.keys()) {
   console.log("country", country);
 }
 
-for(let city of map2.values()){
+for (let city of map2.values()) {
   console.log("city", city);
 }
 
-for (let item of map2){
+for (let item of map2) {
   console.log(item);
 }
+
+// set
+let set = new Set();
+set.add(1);
+set.add({ name: "Jun" });
+set.add({ name: "Shin" });
+
+console.log("set", set);
+
+set.add(1);
+
+console.log("set", set);
+
+set.forEach((value, value2, set) => {
+  console.log("forEach", value, value2, set);
+});
