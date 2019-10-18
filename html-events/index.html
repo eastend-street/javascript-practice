@@ -10,12 +10,20 @@
     <h1>HTML Events</h1>
     <button onclick="handleClick()">Click</button>
     <form>
-      <input id="nameInput" type="text" name="name" placeholder="e.g. Jun" />
+      <input
+        id="nameInput"
+        type="text"
+        name="name"
+        placeholder="e.g. Jun"
+        onkeypress="handleInputChange()"
+        onfocus="handleInputFocus()"
+        onblur="handleInputBlur()"
+      />
       <button onclick="handleFormClick(event)">Submit</button>
     </form>
 
     <ul id="nameList">
-        <li>Jun</li>
+      <li>Jun</li>
     </ul>
 
     <script src="./functions/intro.js"></script>

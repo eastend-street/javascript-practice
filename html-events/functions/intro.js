@@ -16,7 +16,18 @@ const handleFormClick = e => {
 
   let newLine = document.createElement("li");
   newLine.textContent = inputValue;
-  
+
   let list = document.getElementById("nameList");
   list.appendChild(newLine);
 };
+
+const handleInputChange = () => {
+  console.log("Changed");
+};
+
+const handleInputFocus = () => {
+  console.log("Focused");
+}
+const handleInputBlur = () => {
+  console.log("Blurred");
+}
