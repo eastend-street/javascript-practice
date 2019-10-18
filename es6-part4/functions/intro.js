@@ -70,3 +70,28 @@ let numArr = [5, 7, 8, 9, 5, 3];
 console.log("spreadArr", ...numArr);
 
 console.log("add extra element with new array", [...numArr]);
+
+let seagull = {
+  color: "white",
+  sound: "noisy",
+  floatOnSea: true
+};
+
+console.log("add new property to spread obj", {
+  ...seagull,
+  beakColor: "yellow"
+});
+console.log("override key to spread obj", { ...seagull, color: "black" });
+
+// Set timeout
+const alertMe = message => {
+  alert(message);
+};
+
+// setTimeout(alertMe, 4000, "ahhhhhhhhhh"); // 引数は後ろに書く！（)をつけない
+
+const returnString = () => {
+  return "Hiiiiiiiiiiii";
+};
+
+console.log(setTimeout(returnString(), 2000));
