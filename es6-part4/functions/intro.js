@@ -90,8 +90,13 @@ const alertMe = message => {
 
 // setTimeout(alertMe, 4000, "ahhhhhhhhhh"); // 引数は後ろに書く！（)をつけない
 
-const returnString = () => {
-  return "Hiiiiiiiiiiii";
+const tick = () => {
+  console.log(new Date().getSeconds());
 };
 
-console.log(setTimeout(returnString(), 2000));
+const tickVar = setInterval(tick, 1000);
+
+setTimeout(() => {
+  clearInterval(tickVar);
+  console.log("finish!");
+}, 10000);
