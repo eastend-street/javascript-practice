@@ -8,7 +8,9 @@
     <title>Document</title>
   </head>
   <body>
-    <form class="first-form" onsubmit="handleSubmit(event)">
+    <!-- <form class="first-form" onsubmit="handleSubmit(event)"> -->
+    <form class="first-form" action="https://formspree.io/suminari.yamada@gmail.com">
+      <label>First Name: </label>
       <input
         type="text"
         size="40"
@@ -18,17 +20,21 @@
         placeholder="John"
         autofocus
       />
+      <label>Surname: </label>
       <input type="text" name="lastName" required placeholder="Smith" />
+      <label>Email: </label>
       <input
         type="email"
         name="email"
         required
         placeholder="smith@example.com"
       />
+      <label>Password: </label>
       <input type="password" required name="password" />
+      <label>Tel: </label>
       <input type="tel" required name="phoneNumber" />
       <input type="submit" value="Submit" />
-      <button type="submit">Submit with button tag</button>
+      <!-- <button type="submit">Submit with button tag</button> -->
     </form>
     <script src="./functions/intro.js"></script>
   </body>
