@@ -4,11 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <form onsubmit="handleSubmit(event)">
-      <input type="submit" value="Submit">
+    <form class="first-form" onsubmit="handleSubmit(event)">
+      <input
+        type="text"
+        size="40"
+        maxlength="40"
+        required
+        name="firstName"
+        placeholder="John"
+        autofocus
+      />
+      <input type="text" name="lastName" required placeholder="Smith" />
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="smith@example.com"
+      />
+      <input type="password" required name="password" />
+      <input type="tel" required name="phoneNumber" />
+      <input type="submit" value="Submit" />
       <button type="submit">Submit with button tag</button>
     </form>
     <script src="./functions/intro.js"></script>
