@@ -19,11 +19,25 @@
         });
       }
       //  1. then
-      examplePromise().then(result => {
-        console.log(result);
-      }).catch((err) => {
-          console.log(err)
-      });
+      examplePromise("Ayako")
+        .then(result => {
+          console.log(result);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+
+      // 2. async/awaits
+      async function executeExamplePromise() {
+        try {
+          const result = await examplePromise("Shota");
+          console.log(result);
+        } catch (err) {
+          // will only execute IF result is reject
+          console.log(err);
+        }
+      }
+      executeExamplePromise();
       console.log("hello");
     </script>
   </body>
