@@ -18,10 +18,13 @@
           }
         });
       }
-      const answer = examplePromise("Ayako").then(result => {
+      //  1. then
+      examplePromise().then(result => {
         console.log(result);
+      }).catch((err) => {
+          console.log(err)
       });
-      console.log("hello")
+      console.log("hello");
     </script>
   </body>
 </html>
