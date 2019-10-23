@@ -24,3 +24,24 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
     console.log(result);
   })
   .catch(err => console.log(err));
+
+// 3. PUT
+fetch("https://jsonplaceholder.typicode.com/posts/8", {
+  method: "PUT",
+  body: JSON.stringify({
+    id: 1,
+    title: "foo",
+    body: "bar",
+    userId: 1
+  }),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8"
+  }
+})
+  .then(res => {
+    return res.json();
+  })
+  .then(result => {
+    console.log(result);
+  })
+  .catch(err => console.log(err));
