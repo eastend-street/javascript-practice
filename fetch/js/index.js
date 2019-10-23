@@ -1,4 +1,4 @@
-fetch("https://api.github.com/repos/eastend-street/portfolio/issues")
+fetch("https://api.github.com/repos/eastend-street/codeal/issues")
   .then(res => {
     return res.json();
   })
