@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .arrow {
+        fill: red;
+        stroke: blue;
+        width: 300px;
+        stroke-dasharray: 110;
+        stroke-dashoffset: -10;
+
+        animation: strokeAnimation 3s linear infinite;
+      }
+
+      @keyframes strokeAnimation {
+        0% {
+          stroke-dashoffset: 300;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg class="arrow" version="1.1"></svg>
+  </body>
+</html>
