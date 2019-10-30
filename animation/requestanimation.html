@@ -23,6 +23,8 @@
         console.log("Time!", new Date().getMilliseconds);
         count += 1;
         let frame;
+        box.style.transform = `translateX(${count}px)`;
+
         if (count > 500) {
           window.cancelAnimationFrame(frame);
         } else {
