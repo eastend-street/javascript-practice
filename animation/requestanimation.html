@@ -18,6 +18,18 @@
     <div id="box"></div>
     <script>
       const box = document.getElementById("box");
+      let count = 0;
+      function animate() {
+        console.log("Time!", new Date().getMilliseconds);
+        count += 1;
+        let frame;
+        if (count > 500) {
+          window.cancelAnimationFrame(frame);
+        } else {
+          frame = window.requestAnimationFrame(animate);
+        }
+      }
+      animate();
     </script>
   </body>
 </html>
