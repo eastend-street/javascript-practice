@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Canvas</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      canvas {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+      let canvas = document.getElementById("myCanvas");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      let context = canvas.getContext("2d");
+
+      // 1. rectangle
+      context.fillStyle = "red"; // hex, rgba, string
+      context.fillRect(100, 100, 100, 100); // x, y, width, height
+
+      context.fillStyle = "blue"; // hex, rgba, string
+      context.fillRect(200, 200, 100, 100);
+    </script>
+  </body>
 </html>
