@@ -25,7 +25,38 @@
       context.fillRect(100, 100, 100, 100); // x, y, width, height
 
       context.fillStyle = "blue"; // hex, rgba, string
-      context.fillRect(200, 200, 100, 100);
+      context.fillRect(200, 200, 300, 100);
+
+      // 2. line
+      // 2-a: always start with beginPath
+      context.beginPath();
+
+      context.moveTo(0, 0); // startingPoint = moveTo(x,y)
+      context.lineTo(500, 500);
+      context.lineTo(300, 500);
+      context.lineTo(300, 100);
+      context.strokeStyle = "green";
+      context.lineWidth = 2;
+      // 2-b: always start with .stroke()
+      context.stroke();
+
+      // 3. circles
+      context.beginPath();
+      context.arc(500, 500, 50, Math.PI * 2, false); // x, y, radius, startAngle, float,
+      context.strokeStyle = "red";
+      context.stroke();
+
+      let x;
+      let y;
+
+      for (let i = 0; i < 100; i++) {
+        x = Math.random() * window.innerWidth;
+        y = Math.random() * window.innerHeight;
+        context.beginPath();
+        context.arc(x, y, 50, Math.PI * 2, false); // x, y, radius, startAngle, float,
+        context.strokeStyle = "red";
+        context.stroke();
+      }
     </script>
   </body>
 </html>
