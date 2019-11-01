@@ -46,17 +46,46 @@
       context.strokeStyle = "red";
       context.stroke();
 
-      let x;
-      let y;
+      // let x;
+      // let y;
 
-      for (let i = 0; i < 100; i++) {
-        x = Math.random() * window.innerWidth;
-        y = Math.random() * window.innerHeight;
+      // for (let i = 0; i < 100; i++) {
+      //   x = Math.random() * window.innerWidth;
+      //   y = Math.random() * window.innerHeight;
+      //   context.beginPath();
+      //   context.arc(x, y, 50, Math.PI * 2, false); // x, y, radius, startAngle, float,
+      //   context.strokeStyle = "red";
+      //   context.stroke();
+      // }
+
+      let circleX = 200;
+      let circleY = 200;
+
+      let directionX = 1;
+      let directionY = 1;
+
+      function animate() {
+        context.clearRect(0, 0, innerWidth, innerHeight);
+
+        if (circleX > innerWidth - 50 || circleX < 50) {
+          directionX = -directionX;
+        }
+        if (circleY > innerHeight - 50 || circleY < 50) {
+          directionY = -directionY;
+        }
+
+        circleX += directionX;
+        circleY += directionY;
+        // animate
         context.beginPath();
-        context.arc(x, y, 50, Math.PI * 2, false); // x, y, radius, startAngle, float,
+        context.arc(circleX, circleY, 50, Math.PI * 2, false); // x, y, radius, startAngle, float,
         context.strokeStyle = "red";
         context.stroke();
+
+        window.requestAnimationFrame(animate);
       }
+
+      animate();
     </script>
   </body>
 </html>

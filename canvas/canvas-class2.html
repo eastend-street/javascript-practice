@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>100 random bouncing ball</title>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+      class Circle {
+        constructor(x, y, context) {
+          this.circleX = x;
+          this.circleY = y;
+
+          this.directionX = 2;
+          this.directionY = 2;
+
+          this.context = context;
+        }
+
+        animate() {
+          // const self = this;
+          this.context.clearRect(0, 0, innerWidth, innerHeight);
+          if (this.circleX > innerWidth - 50 || this.circleX < 50) {
+            this.directionX = -this.directionX;
+          }
+          if (this.circleY > innerHeight - 50 || this.circleY < 50) {
+            this.directionY = -this.directionY;
+          }
+
+          this.circleX += this.directionX;
+          this.circleY += this.directionY;
+          this.context.beginPath();
+          this.context.arc(this.circleX, this.circleY, 50, Math.PI * 2, false); // x, y, radius, startAngle, float,
+          this.context.strokeStyle = "red";
+          this.context.stroke();
+
+          window.requestAnimationFrame(
+            // this.animate(this.circleX, this.circleY, this.context)
+          );
+        }
+      }
+
+      let canvas = document.getElementById("myCanvas");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      let context = canvas.getContext("2d");
+
+      let randomX = Math.random() * (innerWidth - 50);
+      let randomY = Math.random() * (innerHeight - 50);
+      const circle = new Circle(randomX, randomY, context);
+      circle.animate();
+
+      // for (let i = 0; i < 1; i++) {
+      //   let randomX = Math.random() * (innerWidth - 50);
+      //   let randomY = Math.random() * (innerHeight - 50);
+      //   const circle = new Circle(randomX, randomY, context);
+      //   circle.animate();
+      // }
+    </script>
+  </body>
+</html>
